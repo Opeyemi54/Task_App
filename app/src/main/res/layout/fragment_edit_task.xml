@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EditTaskFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.hfad.taskapp.viewModels.EditTaskViewModel" />
+    </data>
+
+ <LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/task_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:inputType="text"
+        android:text="@={viewModel.task.taskName}"/>
+
+     <CheckBox
+         android:id="@+id/task_done"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textSize="16sp"
+         android:checked="@={viewModel.task.taskDone}"/>
+
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/update_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="start"
+         app:cornerRadius="7dp"
+         android:letterSpacing="0.1"
+         android:text="@string/update_button"
+         android:onClick="@{() -> viewModel.updateTask()}"/>
+
+     <com.google.android.material.button.MaterialButton
+         android:id="@+id/delete_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="end"
+         app:cornerRadius="7dp"
+         android:letterSpacing="0.1"
+         android:text="@string/delete_button"
+         android:onClick="@{() -> viewModel.deleteTask()}"/>
+
+
+ </LinearLayout>
+</layout>

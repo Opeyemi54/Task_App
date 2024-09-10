@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Task App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_text">Save Task</string>
+    <string name="Input_text">Enter a task name</string>
+    <string name="delete">Delete</string>
+    <string name="done">Done?</string>
+    <string name="delete_button">Delete Task</string>
+    <string name="update_button">Update Task</string>
+</resources>
